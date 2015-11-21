@@ -2,9 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   didInsertElement: function() {
-    Ember.$(".button-collapse.navbar-collapse").sideNav({
-      edge: 'right'
-    });
+    Ember.$(".button-collapse.sidenav-collapse").sideNav();
     return true;
   }
 });

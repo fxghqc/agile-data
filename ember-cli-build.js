@@ -32,6 +32,16 @@ module.exports = function(defaults) {
   app.import('bower_components/Materialize/dist/font/roboto/Roboto-Regular.ttf', {
     destDir: 'font/roboto'
   });
+  app.import('bower_components/Materialize/dist/font/material-design-icons/Material-Design-Icons.woff2', {
+    destDir: 'font/material-design-icons'
+  });
+  app.import('bower_components/Materialize/dist/font/material-design-icons/Material-Design-Icons.woff', {
+    destDir: 'font/material-design-icons'
+  });
+  app.import('bower_components/Materialize/dist/font/material-design-icons/Material-Design-Icons.ttf', {
+    destDir: 'font/material-design-icons'
+  });
+
 
   return app.toTree();
 };

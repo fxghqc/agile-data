@@ -1,0 +1,32 @@
+.side-nav {
+  margin-top: 64px;
+  z-index: 998;
+}
+.sidenav-collapse i {
+  position: fixed;
+  top: 0;
+  font-size: 2.7rem;
+  height: 56px;
+  line-height: 56px;
+  color: white;
+  z-index: 997;
+}
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+  .sidenav-collapse i {
+    z-index: 1000;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .sidenav-collapse i {
+    height: 64px;
+    line-height: 64px;
+  }
+}
+@media only screen and (max-width: 601px) {
+  .side-nav {
+    margin-top: 56px;
+  }
+}
