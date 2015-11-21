@@ -4,9 +4,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here    
+    // Add options here
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
+      includePaths: ['bower_components/Materialize/sass']
     },
   });
 
@@ -22,6 +22,16 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  app.import('bower_components/Materialize/dist/js/materialize.min.js');
+  app.import('bower_components/Materialize/dist/font/roboto/Roboto-Regular.woff2', {
+    destDir: 'font/roboto'
+  });
+  app.import('bower_components/Materialize/dist/font/roboto/Roboto-Regular.woff', {
+    destDir: 'font/roboto'
+  });
+  app.import('bower_components/Materialize/dist/font/roboto/Roboto-Regular.ttf', {
+    destDir: 'font/roboto'
+  });
 
   return app.toTree();
 };
