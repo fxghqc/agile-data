@@ -1,11 +1,11 @@
-<ul>
-  <li>实体</li>
-  <li>关联</li>
-  <li>视图</li>
-</ul>
-<ul>
-  <li>模块</li>
-  <li>操作</li>
-  <li>事件</li>
-</ul>
+<li class="collection-item">
+  {{node.displayName}}
+  {{#if hasChildren}}
+    <ul class="collection">
+      {{#each node.children as |child|}}
+        {{tree-view node=child}}
+      {{/each}}
+    </ul>
+  {{/if}}
+</li>
 {{yield}}
