@@ -1,20 +1,10 @@
 & {
-  color: red;
+  color: #757575;
 }
-.collection-item {
-  padding-right: 0px;
+
+.collection .collection-item:last-child {
   border-bottom: 1px solid #e0e0e0;
 }
 .collection {
-  // padding-right: 200px;
-  margin-top: 10px;
-  margin-bottom: -10px;
-  border-right: none;
-  border-left: none;
-  .collection-item {
-    padding-right: 0px;
-  }
-  div:last-child .collection-item {
-    border-bottom: none;
-  }
+  border-bottom: none;
 }

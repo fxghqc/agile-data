@@ -12,6 +12,7 @@
     "jquery": "^2.1.4",
     "loader.js": "ember-cli/loader.js#3.4.0",
     "qunit": "~1.20.0",
-    "Materialize": "materialize#~0.97.3"
+    "Materialize": "materialize#~0.97.3",
+    "font-awesome": "~4.5.0"
   }
 }

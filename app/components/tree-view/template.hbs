@@ -1,11 +1,6 @@
-<li class="collection-item">
-  {{node.displayName}}
-  {{#if hasChildren}}
-    <ul class="collection">
-      {{#each node.children as |child|}}
-        {{tree-view node=child}}
-      {{/each}}
-    </ul>
-  {{/if}}
-</li>
+<ul class="collection model-collection">
+  {{#each tree as |node|}}
+    {{tree-node node=node level=1}}
+  {{/each}}
+</ul>
 {{yield}}

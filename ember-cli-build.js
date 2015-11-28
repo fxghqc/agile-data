@@ -6,7 +6,9 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
-      includePaths: ['bower_components/Materialize/sass']
+      includePaths: [
+        'bower_components/Materialize/sass'
+      ]
     },
   });
 
@@ -42,6 +44,16 @@ module.exports = function(defaults) {
     destDir: 'font/material-design-icons'
   });
 
+  app.import('bower_components/font-awesome/css/font-awesome.min.css');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf', {
+    destDir: 'fonts'
+  });
 
   return app.toTree();
 };

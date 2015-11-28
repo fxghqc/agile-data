@@ -1,0 +1,16 @@
+<li class="collection-item">
+  <span class="node-title" style={{indentStyle}}>
+    {{#if hasChildren}}
+      <span class="node-icon"><i class="fa fa-plus-square-o"></i></span>
+    {{/if}}
+    {{node.displayName}}
+  </span>
+  {{#if hasChildren}}
+    <ul class="collection">
+      {{#each node.children as |child|}}
+        {{tree-node node=child level=childLevel}}
+      {{/each}}
+    </ul>
+  {{/if}}
+</li>
+{{yield}}
