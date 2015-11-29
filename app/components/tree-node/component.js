@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: 'li',
+  classNames: ['collection-item'],
+
   openChildren: false,
   hasChildren: function() {
     return this.get('node.children') && this.get('node.children').length > 0;

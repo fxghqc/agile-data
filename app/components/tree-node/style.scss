@@ -1,7 +1,4 @@
-.collection-item {
-  padding-right: 0px;
-  padding-left: 0px;
-  border-bottom: 1px solid #e0e0e0;
+& {
   position: relative;
 }
 .node-title {
@@ -33,10 +30,11 @@
   margin-bottom: -10px;
   border-right: none;
   border-left: none;
+  border-bottom: none;
   .collection-item {
     padding-right: 0px;
   }
-  div:last-child .collection-item {
+  .collection-item:last-child {
     border-bottom: none;
   }
 }

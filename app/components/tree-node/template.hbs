@@ -1,16 +1,14 @@
-<li class="collection-item">
-  <span class="node-title" style={{indentStyle}}>
-    {{#if hasChildren}}
-      {{tree-node-switch changeStatus=(action 'showOrHideChildren')}}
-    {{/if}}
-    {{node.displayName}}
-  </span>
-  {{#if openChildren}}
-    <ul class="collection">
-      {{#each node.children as |child|}}
-        {{tree-node node=child level=childLevel}}
-      {{/each}}
-    </ul>
+<span class="node-title" style={{indentStyle}}>
+  {{#if hasChildren}}
+    {{tree-node-switch changeStatus=(action 'showOrHideChildren')}}
   {{/if}}
-</li>
+  {{node.displayName}}
+</span>
+{{#if openChildren}}
+  <ul class="collection">
+    {{#each node.children as |child|}}
+      {{tree-node node=child level=childLevel}}
+    {{/each}}
+  </ul>
+{{/if}}
 {{yield}}
