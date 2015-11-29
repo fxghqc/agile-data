@@ -1,12 +1,11 @@
 <li class="collection-item">
   <span class="node-title" style={{indentStyle}}>
     {{#if hasChildren}}
-      <!-- <span class="node-icon"><i class="fa fa-angle-right"></i></span> -->
-      <span class="node-icon"><i class="fa fa-angle-down"></i></span>
+      {{tree-node-switch changeStatus=(action 'showOrHideChildren')}}
     {{/if}}
     {{node.displayName}}
   </span>
-  {{#if hasChildren}}
+  {{#if openChildren}}
     <ul class="collection">
       {{#each node.children as |child|}}
         {{tree-node node=child level=childLevel}}
