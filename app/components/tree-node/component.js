@@ -6,17 +6,17 @@ export default Ember.Component.extend({
 
   openChildren: false,
   showOprs: false,
-  hasChildren: function() {
+  hasChildren: Ember.computed('node', function() {
     return this.get('node.children') && this.get('node.children').length > 0;
-  }.property('node'),
-  childLevel: function() {
+  }),
+  childLevel: Ember.computed('level', function() {
     return this.get('level') + 1;
-  }.property('level'),
-  indentStyle: function() {
+  }),
+  indentStyle: Ember.computed('level', function() {
     // var padding = escapeCSS(this.get('level') * 20 + 'px');
     var padding = this.get('level') * 20 + 'px';
     return Ember.String.htmlSafe('padding-left: ' + padding);
-  }.property('level'),
+  }),
   actions: {
     showOrHideChildren(status) {
       this.set('openChildren', this.get('hasChildren') && status);
