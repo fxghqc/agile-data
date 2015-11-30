@@ -1,9 +1,18 @@
-<span class="node-title" style={{indentStyle}}>
+<div class="node-title" style={{indentStyle}} {{action "showOprsAction" on="mouseEnter"}} {{action "hideOprsAction" on="mouseLeave"}}>
   {{#if hasChildren}}
-    {{tree-node-switch changeStatus=(action 'showOrHideChildren')}}
+    <div style="position: relative;">
+      {{collapse-switch changeStatus=(action 'showOrHideChildren')}}
+    </div>
   {{/if}}
   {{node.displayName}}
-</span>
+  {{#if showOprs}}
+    <div class="node-opr-container">
+      <i class="fa fa-plus-square-o"></i>
+      <i class="fa fa-minus-square-o"></i>
+      <i class="fa fa-pencil-square-o"></i>
+    </div>
+  {{/if}}
+</div>
 {{#if openChildren}}
   <ul class="collection">
     {{#each node.children as |child|}}

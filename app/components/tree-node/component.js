@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   classNames: ['collection-item'],
 
   openChildren: false,
+  showOprs: false,
   hasChildren: function() {
     return this.get('node.children') && this.get('node.children').length > 0;
   }.property('node'),
@@ -14,11 +15,17 @@ export default Ember.Component.extend({
   indentStyle: function() {
     // var padding = escapeCSS(this.get('level') * 20 + 'px');
     var padding = this.get('level') * 20 + 'px';
-    return Ember.String.htmlSafe('margin-left: ' + padding);
+    return Ember.String.htmlSafe('padding-left: ' + padding);
   }.property('level'),
   actions: {
     showOrHideChildren(status) {
       this.set('openChildren', this.get('hasChildren') && status);
+    },
+    showOprsAction() {
+      this.set('showOprs', true);
+    },
+    hideOprsAction() {
+      this.set('showOprs', false);
     }
   }
 });
